@@ -1,5 +1,4 @@
-import ast
-from FaultLocalization.DataReader import DataReader
+
 def mid(a, b):
     if a == 0:
         print(b)

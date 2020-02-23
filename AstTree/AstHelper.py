@@ -3,7 +3,7 @@ import sys
 import libcst as cst
 import array as arr
 import pycfg
-
+import astor
 sys.path.append('..')
 from FaultLocalization.Tracer import Tracer
 
@@ -14,10 +14,37 @@ from Data.unitTest import GetResult
 class AstHelper():
     def GetNodeByLineNo(self,lineNode,tree):
         for node in ast.walk(tree):
-            res = not node.__dict__
+            res = not node.__dict__ # check map is empty or not
             if ('lineno' in node.__dict__.keys()):
                 if res == False and node.__dict__['lineno'] == lineNode:
                     return node
+    def GetFullStatementNode(self,node):
+        stringNode = astor.to_source(node)
+        colOffset = node.col_offset
+        arrNode = stringNode.split("\n")
+        stringNodeWithOffset = ""
+        del arrNode[-1]
+        # print(arrNode)
+        for line in arrNode:
+            stringNodeWithOffset += colOffset*" " + line + "\n"
+        return stringNodeWithOffset
+    def SwapNode(self,nodeSource, nodeDestination):
+        ast.copy_location(nodeSource,nodeDestination)
+    def DeleteNode(self,context,node):
+        stringNode = astor.to_source(node)
+        arrNode = stringNode.split("\n")
+        print(arrNode)
+        for i in arrNode:
+            if i.strip() in context:
+                context = context.replace(i, "")
+        return context
+    def InsertAfter(self, context, nodeInsert , nodeIndex):
+        fullIndexNode = self.GetFullStatementNode(nodeIndex)
+        fullInsertNode = self.GetFullStatementNode(nodeInsert)
+        index = context.find(fullIndexNode)
+        return context[:index] + fullInsertNode + context[index:]
+
+
 class Tranformer:
     def DeleteStmt(self, lineNo, arr):
         return arr.remove(arr[lineNo])
@@ -103,7 +130,10 @@ class AnalysisNodeVisitor(ast.NodeVisitor):
         ast.NodeVisitor.generic_visit(self, node)
         return None
 
-
+class Assignment(ast.NodeTransformer):
+    def visit_Assign(self, node):
+        ast.NodeVisitor.generic_visit(self, node)
+        print(astor.to_source(node))
 if __name__ == '__main__':
 
     # tracedr = Tracer()
@@ -118,24 +148,13 @@ if __name__ == '__main__':
     # helper.WriteToFile(ct)
     # flag = Flag(0)
     dR = DataReader()
-    # context = dR.getContextFileWithPath("D:\\docu\\KL\\Data\\unitTest.py")
-    # exec(context)
-    # resulter = GetResult()
-    # i = resulter.getResult()
-    # print(i)
+
     context = dR.getContextFile()
     tree = ast.parse(context)
-    global node4
-    global node9
-    for node in ast.walk(tree):
-        res = not node.__dict__
-        if('lineno' in node.__dict__.keys()):
-            if res == False and node.__dict__['lineno'] == 4:
-                node4 = node
-                print(node.__dict__)
-            if res == False and node.__dict__['lineno'] == 9:
-                node9 = node
-    ast.copy_location(node4,node9)
 
-    print(node4.lineno)
-    print(node4.__dict__)
+    helper = AstHelper()
+    node4 = helper.GetNodeByLineNo(8,tree)
+    print(astor.to_source(node4))
+    node5 = helper.GetNodeByLineNo(3,tree)
+    newContext = helper.InsertAfter(context,node4,node5)
+    print(newContext)

@@ -14,7 +14,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Wbk8nDYrb6tMsjiDvbrEmLXWn0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,6 +28,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
     <configuration name="Tracer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -90,7 +95,11 @@
       <workItem from="1581220290384" duration="19909000" />
       <workItem from="1581339280842" duration="3846000" />
       <workItem from="1581429009804" duration="1425000" />
-      <workItem from="1581994365102" duration="22598000" />
+      <workItem from="1581994365102" duration="23305000" />
+      <workItem from="1582119011231" duration="600000" />
+      <workItem from="1582210417828" duration="3418000" />
+      <workItem from="1582374381144" duration="5569000" />
+      <workItem from="1582457576178" duration="11250000" />
     </task>
     <servers />
   </component>
@@ -106,10 +115,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1581168715948" />
-    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579425665509">
+    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582473125686">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1579425665509" />
+    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1582473125686" />
     <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1580615044681">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -130,10 +139,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580392343771" />
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1581994365170">
+    <state x="184" y="7" key="SettingsEditor" timestamp="1582473297953">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581994365170" />
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582473297953" />
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1582457576156">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582457576156" />
     <state x="380" y="0" width="606" height="728" key="find.popup" timestamp="1582023003563">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
