@@ -1,3 +1,6 @@
+import sys
+sys.path.append('..')
+from Variant.Pop3 import mid
 
 
 import unittest
@@ -40,11 +43,11 @@ class TestSum(unittest.TestCase):
             flag.setRank(1)
         print("failures: " + str(len(cls.failures)))
         if len(cls.failures) != 0:
-            flag.setFailed(len(cls.failures) + len(cls.errors))
+            flag.setFailed(cls.failures)
         print("success: " + str(cls.amount - len(cls.errors) - len(cls.failures)))
         flag.setPassed(cls.amount - len(cls.errors) - len(cls.failures))
         print("skipped: " + str(len(cls.skipped)))
-        print(flag.failed)
+
     def run(self, result=None):
         self.currentResult = result  # remember result for use in tearDown
         unittest.TestCase.run(self, result)  # call superclass run method
@@ -61,18 +64,17 @@ class TestSum(unittest.TestCase):
     def test_sum_5(self):
         self.assertEqual(mid(2, 4), 2, "Should be 2")
     def test_sum(self):
-        self.assertEqual(mid(0, 2), 2, "Should be 2")
+        self.assertEqual(mid(0, 2), 1, "Should be 2")
 
 class GetResult:
     def getResult(self):
         unittest.main(exit=False)
-        print(flag.failed)
+        print("done")
         print(flag.passed)
+        print(flag.failed)
         return flag.getRank()
 if __name__ == '__main__':
     r = GetResult()
     r.getResult()
     # unittest.main(exit=False)
-    # print("done")
-
     # print(flag.getRank())

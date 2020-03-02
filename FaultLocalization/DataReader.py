@@ -16,6 +16,7 @@ class DataReader:
                 lines.append(line)
         return i + 1, lines
 
+
     def getContextFile(self):
         fname = "D:\docu\KL\Data\mid.py"
         with open(fname) as f :
@@ -27,8 +28,23 @@ class DataReader:
             for line in f.readlines():
                 contents += line
         return contents
+    def writeToFile(self,fname,context):
+        # ContextListPop = self.getContextFileWithPath("D:\docu\KL\Variant\listPop")
+        # ListPop = ContextListPop.split('\n')
+        # # print(listPop)
+        # for path in ListPop:
+        #     variantPath = "D:\docu\KL\Variant\\"+ path
+        #     f = open(variantPath,"w+")
+        #     context = "abc"
+        #     f.write(context)
+        #     f.close()
+        #     print(variantPath)
+        
+        f = open(fname, "w+")
+        f.write(context)
+        f.close()
 if __name__ == '__main__':
     dR = DataReader()
-    length = dR.file_len("D:\docu\KL\Data\mid.py")
+    length = dR.file_len("D:\docu\KL\Variant\Pop4.py")
     print(length)
     # print(dR.getContextFile())

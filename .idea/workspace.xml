@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="KL" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -29,6 +32,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\docu\KL\Genetic" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Tracer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -99,7 +107,17 @@
       <workItem from="1582119011231" duration="600000" />
       <workItem from="1582210417828" duration="3418000" />
       <workItem from="1582374381144" duration="5569000" />
-      <workItem from="1582457576178" duration="11250000" />
+      <workItem from="1582457576178" duration="11680000" />
+      <workItem from="1582516224830" duration="2129000" />
+      <workItem from="1582558659818" duration="3090000" />
+      <workItem from="1582638856486" duration="729000" />
+      <workItem from="1582640006236" duration="8461000" />
+      <workItem from="1582725579516" duration="8527000" />
+      <workItem from="1582815381152" duration="5877000" />
+      <workItem from="1582898254639" duration="600000" />
+      <workItem from="1582973826332" duration="1723000" />
+      <workItem from="1583029139194" duration="36542000" />
+      <workItem from="1583155176198" duration="14402000" />
     </task>
     <servers />
   </component>
@@ -115,14 +133,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1581168715948" />
-    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582473125686">
+    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582561373113">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1582473125686" />
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1580615044681">
+    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1582561373113" />
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1583171859161">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1580615044681" />
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583171859161" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1580392343771">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -139,18 +157,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580392343771" />
-    <state x="184" y="7" key="SettingsEditor" timestamp="1582473297953">
+    <state x="184" y="7" key="SettingsEditor" timestamp="1583171864853">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582473297953" />
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1582457576156">
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583171864853" />
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1583155176214">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582457576156" />
-    <state x="380" y="0" width="606" height="728" key="find.popup" timestamp="1582023003563">
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583155176214" />
+    <state x="380" y="0" width="606" height="728" key="find.popup" timestamp="1582730984640">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="380" y="0" width="606" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1582023003563" />
+    <state x="380" y="0" width="606" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1582730984640" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1579431131542">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
