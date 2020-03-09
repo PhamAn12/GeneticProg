@@ -14,13 +14,13 @@ class Genetic:
         PolutionArr = []
         tracer = Tracer()
         dR = DataReader()
-        lineArr = tracer.getLineInfor(fname,"mid","from Data.mid import mid")
+        weightpathMap,lineArr = tracer.getLineInfor(fname,"mid","from Data.mid import mid")
         lineArrWeightPath = []
         context = dR.getContextFileWithPath(fname)
         tree = ast.parse(context)
         astHelper = AstHelper()
         node3 = astHelper.GetNodeByLineNo(3,tree)
-        for i in lineArr:
+        for i in weightpathMap:
             if i.weight > 0:
                 lineArrWeightPath.append(i)
         for line in lineArrWeightPath:
@@ -58,8 +58,10 @@ class Genetic:
         return contextDynamicTest
     def CrossOver(self,fnameA,funNameA,fnameB,funNameB,importStringA,importStringB):
         dR = DataReader()
-        cutpointA = self.GetCutOffPoint(fnameA,funNameA,importStringA)
-        cutpointB = self.GetCutOffPoint(fnameB,funNameB,importStringB)
+        # cutpointA = self.GetCutOffPoint(fnameA,funNameA,importStringA)
+        # cutpointB = self.GetCutOffPoint(fnameB,funNameB,importStringB)
+        cutpointA = 5
+        cutpointB = 4
         contextA = dR.getContextFileWithPath(fnameA)
         contextB = dR.getContextFileWithPath(fnameB)
         treeA = ast.parse(contextA)
@@ -70,17 +72,46 @@ class Genetic:
         lineNodeCutA = helper.GetFullStatementNode(nodeCutA)
         lineNodeCutB = helper.GetFullStatementNode(nodeCutB)
 
-        print(lineNodeCutA)
-        print(lineNodeCutB)
+        # print(lineNodeCutA)
+        # print(lineNodeCutB)
+        indexA = contextA.find(lineNodeCutA)
+        indexB = contextB.find(lineNodeCutB)
+        print(indexA)
+        print(contextA[:indexA])
+        print(contextB[indexA:])
+        # print(contextA[:indexA] + contextB[indexA:])
+        # print(contextB[:indexA] + contextA[indexA:])
+        # elif indexB > indexA:
+        #     print(contextB[:indexA] + contextA[indexA:indexB] + contextB[indexB:])
+
+        # print("dòng lệnh bị cắt trong A : " + str(cutpointA))
+        # print("full nội dung dòng lệnh trong A : " + str(lineNodeCutA))
+        # print(contextA[indexA:])
+        # print(contextA[:indexA])
+        # print("dòng lệnh bị cắt trong B : " + str(cutpointB))
+        # print("full nội dung dòng lệnh trong B : " + str(lineNodeCutB))
+        # print(contextB[indexB:])
+        # print(contextB[:indexB])
+        # print("Đoạn giữa : ")
+        print(contextA[indexA:indexB])
+        # print(indexA)
+        # print(indexB)
+        # if indexA <= indexB:
+        #     print(contextA[indexA:indexB])
+        # else:
+        #     print(contextA[indexB:indexA])
+
 
         return cutpointA, cutpointB
 
     def GetCutOffPoint(self,fname,funName,importString):
         tracer = Tracer()
-        arrLineWeight = tracer.getLineInfor(fname,funName,importString)
+        arrLineWeight,arrLineInfor = tracer.getLineInfor(fname,funName,importString)
         randomWeightPoint = random.choice(list(arrLineWeight.keys()))
-        while arrLineWeight[randomWeightPoint] == 0:
+        while arrLineWeight[randomWeightPoint] == 0 or randomWeightPoint == 1:
             randomWeightPoint = random.choice(list(arrLineWeight.keys()))
+        print(randomWeightPoint)
+        print(arrLineInfor[randomWeightPoint].text)
         return randomWeightPoint # tra ve dong trong weight path
 
 if __name__ == '__main__':
@@ -92,9 +123,9 @@ if __name__ == '__main__':
     pop4 = "from Variant.Pop4 import mid"
 
     mu = Genetic()
-    mu.CrossOver("D:\docu\KL\Variant\Pop5.py","mid","D:\docu\KL\Variant\Pop4.py","mid",pop5,pop4)
+    # mu.CrossOver("D:\docu\KL\Variant\Pop5.py","mid","D:\docu\KL\Variant\Pop4.py","mid",pop5,pop4)
 
-    # mu.GetCutOffPoint("D:\docu\KL\Variant\Pop4.py","mid",pop4)
+    mu.GetCutOffPoint("D:\docu\KL\Variant\Pop4.py","mid",pop4)
     # matingPool = []
     # mu = Genetic()
     # dR = DataReader()

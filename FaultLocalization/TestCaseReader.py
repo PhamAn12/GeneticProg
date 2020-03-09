@@ -27,8 +27,28 @@ class ReadFile:
                 testCaseResuts.append((line.rstrip(), line2.rstrip()))
         return results,testCaseResuts,tests,totalPassed,totalFailed
 
+    def ImportResultTestCase(self):
+        currentResult = []
+        resultsTestCaseMap = {}
+        resultTestCasePath = "D:\\docu\\KL\\Test\\resultTestCase"
+        with open(resultTestCasePath, 'r') as file:
+            while True:
+                line = file.readline()
+                try:
+                    number = int(line)
+                    currentResult.append(number)
+                except ValueError:
+                    break
+                line2 = file.readline()
+                # print line2
+                if line2 == 'F\n' or line2 == 'F':
+                    resultsTestCaseMap[number] = False
+                if line2 == 'P\n' or line2 == 'P':
+                    resultsTestCaseMap[number] = True
+                # resultsTestCaseMap.append((line.rstrip(), line2.rstrip()))
+        return currentResult,resultsTestCaseMap
 
 if __name__ == '__main__':
     rf = ReadFile()
-    testtest = rf.importResultsFile()
+    testtest = rf.ImportResultTestCase()
     print(testtest)

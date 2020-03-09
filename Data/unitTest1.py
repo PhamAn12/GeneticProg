@@ -1,6 +1,6 @@
 import sys
 sys.path.append('..')
-from Variant.Pop4 import mid
+from Data.mid import mid
 
 import unittest
 
@@ -34,7 +34,8 @@ class GetResult:
         print("done")
 
 if __name__ == '__main__':
-    r = GetResult()
-    r.getResult()
-    # unittest.main(exit=False)
-    # print(flag.getRank())
+    # r = GetResult()
+    # r.getResult()
+    unittest.main(exit=False)
+
+# print("khabanh =)))")

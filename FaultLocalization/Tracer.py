@@ -173,14 +173,14 @@ class Tracer:
         # print(len(arrLines))
         for i in range(len(arrLines)):
             try:
-                # arrLines[i].setScore(scoreList[i])
-                # arrLines[i].setRank(ranked[i])
+                arrLines[i].setScore(scoreList[i])
+                #arrLines[i].setRank(ranked[i])
                 if i in weightPathMap.keys():
                     arrLines[i].setWeight(weightPathMap[i])
             except IndexError:
                 continue
         #return arrLines
-        return weightPathMap
+        return weightPathMap,arrLines
 
 
 if __name__ == '__main__':

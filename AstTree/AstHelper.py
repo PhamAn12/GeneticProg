@@ -1,4 +1,5 @@
 import ast
+import re
 import sys
 import libcst as cst
 import array as arr
@@ -28,6 +29,10 @@ class AstHelper():
         for line in arrNode:
             stringNodeWithOffset += colOffset*" " + line + "\n"
         return stringNodeWithOffset
+    def GetNumberStsmOfNode(self, statementNode):
+        arr = re.split('\n',statementNode)
+        del arr[-1]
+        return len(arr)
     def SwapNode(self,nodeSource, nodeDestination):
         ast.copy_location(nodeSource,nodeDestination)
     def DeleteNode(self,context,node):
@@ -149,12 +154,18 @@ if __name__ == '__main__':
     # flag = Flag(0)
     dR = DataReader()
 
-    context = dR.getContextFile()
+    context = dR.getContextFileWithPath("D:\docu\KL\Variant\Pop3.py")
     tree = ast.parse(context)
 
     helper = AstHelper()
-    node4 = helper.GetNodeByLineNo(8,tree)
-    print(astor.to_source(node4))
-    node5 = helper.GetNodeByLineNo(3,tree)
-    newContext = helper.InsertAfter(context,node4,node5)
-    print(newContext)
+    node9 = helper.GetNodeByLineNo(9,tree)
+    # print(astor.to_source(node9))
+
+    node4 = helper.GetNodeByLineNo(4,tree)
+    # print(astor.to_source(node4))
+    stringNode4 = helper.GetFullStatementNode(node4)
+    stringNode9 = helper.GetFullStatementNode(node9)
+    # print(stringNode4)
+    # newContext = helper.InsertAfter(context,node8,node4)
+    print(stringNode9)
+    helper.GetNumberStsmOfNode(stringNode9)

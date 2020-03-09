@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db80e707-53a5-437c-9113-3a9fed3c89c3" name="Default Changelist" comment="" />
+    <list default="true" id="db80e707-53a5-437c-9113-3a9fed3c89c3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Test/resultTestCase" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstTree/AstHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/AstTree/AstHelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/unitTest1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/unitTest1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultLocalization/TestCaseReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaultLocalization/TestCaseReader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultLocalization/Tracer.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaultLocalization/Tracer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Genetic/Fitness.py" beforeDir="false" afterPath="$PROJECT_DIR$/Genetic/Fitness.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Genetic/Mutation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Genetic/Mutation.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +126,14 @@
       <workItem from="1582898254639" duration="600000" />
       <workItem from="1582973826332" duration="1723000" />
       <workItem from="1583029139194" duration="36542000" />
-      <workItem from="1583155176198" duration="14402000" />
+      <workItem from="1583155176198" duration="15036000" />
+      <workItem from="1583240538682" duration="9307000" />
+      <workItem from="1583308490536" duration="8457000" />
+      <workItem from="1583416244365" duration="3937000" />
+      <workItem from="1583499316668" duration="2511000" />
+      <workItem from="1583552999315" duration="599000" />
+      <workItem from="1583642500267" duration="5058000" />
+      <workItem from="1583747759201" duration="11930000" />
     </task>
     <servers />
   </component>
@@ -133,10 +149,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1581168715948" />
-    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582561373113">
+    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583766894628">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1582561373113" />
+    <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1583766894628" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1583253535765">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583253535765" />
     <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1583171859161">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -161,14 +181,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583171864853" />
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1583155176214">
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1583747778910">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583155176214" />
-    <state x="380" y="0" width="606" height="728" key="find.popup" timestamp="1582730984640">
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583747778910" />
+    <state x="380" y="0" width="606" height="728" key="find.popup" timestamp="1583508546318">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="380" y="0" width="606" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1582730984640" />
+    <state x="380" y="0" width="606" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1583508546318" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1579431131542">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
