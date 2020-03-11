@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db80e707-53a5-437c-9113-3a9fed3c89c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Test/resultTestCase" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AstTree/AstHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/AstTree/AstHelper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/unitTest1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/unitTest1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FaultLocalization/TestCaseReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaultLocalization/TestCaseReader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultLocalization/Tracer.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaultLocalization/Tracer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Genetic/Fitness.py" beforeDir="false" afterPath="$PROJECT_DIR$/Genetic/Fitness.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Genetic/Mutation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Genetic/Mutation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +128,9 @@
       <workItem from="1583499316668" duration="2511000" />
       <workItem from="1583552999315" duration="599000" />
       <workItem from="1583642500267" duration="5058000" />
-      <workItem from="1583747759201" duration="11930000" />
+      <workItem from="1583747759201" duration="12211000" />
+      <workItem from="1583847866887" duration="1268000" />
+      <workItem from="1583935425311" duration="5168000" />
     </task>
     <servers />
   </component>
@@ -153,10 +150,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1583766894628" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1583253535765">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1583944356058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583253535765" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583944356058" />
     <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1583171859161">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -181,10 +178,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583171864853" />
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1583747778910">
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1583935487979">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583747778910" />
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583935487979" />
     <state x="380" y="0" width="606" height="728" key="find.popup" timestamp="1583508546318">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

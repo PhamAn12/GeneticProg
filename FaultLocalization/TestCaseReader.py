@@ -31,8 +31,10 @@ class ReadFile:
         currentResult = []
         resultsTestCaseMap = {}
         resultTestCasePath = "D:\\docu\\KL\\Test\\resultTestCase"
+        index = 0
         with open(resultTestCasePath, 'r') as file:
             while True:
+
                 line = file.readline()
                 try:
                     number = int(line)
@@ -41,11 +43,13 @@ class ReadFile:
                     break
                 line2 = file.readline()
                 # print line2
+
                 if line2 == 'F\n' or line2 == 'F':
-                    resultsTestCaseMap[number] = False
+                    resultsTestCaseMap[(number,index)] = False
                 if line2 == 'P\n' or line2 == 'P':
-                    resultsTestCaseMap[number] = True
+                    resultsTestCaseMap[(number,index)] = True
                 # resultsTestCaseMap.append((line.rstrip(), line2.rstrip()))
+                index = index + 1
         return currentResult,resultsTestCaseMap
 
 if __name__ == '__main__':
