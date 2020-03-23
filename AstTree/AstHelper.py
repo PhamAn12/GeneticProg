@@ -3,7 +3,7 @@ import re
 import sys
 import libcst as cst
 import array as arr
-import pycfg
+# import pycfg
 import astor
 sys.path.append('..')
 from FaultLocalization.Tracer import Tracer
@@ -33,20 +33,29 @@ class AstHelper():
         arr = re.split('\n',statementNode)
         del arr[-1]
         return len(arr)
-    def SwapNode(self,nodeSource, nodeDestination):
-        ast.copy_location(nodeSource,nodeDestination)
+
+    def SwapNode(self, context, nodeInsert, nodeIndex):  # insert nodeInsert before nodeIndex
+        fullIndexNode = self.GetFullStatementNode(nodeIndex)
+        fullInsertNode = self.GetFullStatementNode(nodeInsert)
+        index = context.find(fullIndexNode)
+        tempContext =  context[:index] + fullInsertNode + context[index:]
+        return self.DeleteNode(tempContext,nodeInsert)
+        # return context[:index] + fullInsertNode + context[index:]
     def DeleteNode(self,context,node):
         stringNode = astor.to_source(node)
         arrNode = stringNode.split("\n")
         print(arrNode)
         for i in arrNode:
             if i.strip() in context:
-                context = context.replace(i, "")
+                context = context.replace(i, "", 1)
+                break
         return context
-    def InsertAfter(self, context, nodeInsert , nodeIndex):
+    def InsertBefor(self, context, nodeInsert , nodeIndex): # insert nodeInsert before nodeIndex
         fullIndexNode = self.GetFullStatementNode(nodeIndex)
         fullInsertNode = self.GetFullStatementNode(nodeInsert)
         index = context.find(fullIndexNode)
+        # tempContext =  context[:index] + fullInsertNode + context[index:]
+        # return self.DeleteNode(tempContext,nodeInsert)
         return context[:index] + fullInsertNode + context[index:]
 
 
@@ -158,14 +167,14 @@ if __name__ == '__main__':
     tree = ast.parse(context)
 
     helper = AstHelper()
-    node9 = helper.GetNodeByLineNo(9,tree)
+    node5 = helper.GetNodeByLineNo(9,tree)
     # print(astor.to_source(node9))
 
     node4 = helper.GetNodeByLineNo(4,tree)
     # print(astor.to_source(node4))
     stringNode4 = helper.GetFullStatementNode(node4)
-    stringNode9 = helper.GetFullStatementNode(node9)
-    # print(stringNode4)
+    stringNode5 = helper.GetFullStatementNode(node5)
+    print(stringNode4)
     # newContext = helper.InsertAfter(context,node8,node4)
-    print(stringNode9)
-    helper.GetNumberStsmOfNode(stringNode9)
+    newContext = helper.SwapNode(context,node5,node4) # insert node5 before node4
+    print(newContext)

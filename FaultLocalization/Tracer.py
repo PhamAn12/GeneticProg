@@ -150,7 +150,7 @@ class Tracer:
     def getLineInfor(self, fname,funName,x):
         tracer = Tracer()
         weightPathMap, dictLtoT = self.getLineToTest(fname,funName,x)
-        print(weightPathMap)
+        # print(weightPathMap)
 
         suspiciousness = {}
         scoreList = []
@@ -191,10 +191,10 @@ if __name__ == '__main__':
     # funName2 = os.path.splitext('mid2.py')[0]
     # funName1 = os.path.splitext('mid1.py')[0]
 
-    x = "from Variant.Pop5 import mid"
+    x = "from Variant.Pop1 import mid"
     # y = "from Variant.Pop5 import mid"
     # exec(y)
-    tracer.getLineInfor("D:\docu\KL\Variant\Pop5.py","mid",x)
+    tracer.getLineInfor("D:\docu\KL\Variant\Pop1.py","mid",x)
     # tracer.getLineInfor("D:\docu\KL\Variant\Pop4.py", funName4)
     # tracer.getLineInfor("D:\docu\KL\Variant\Pop3.py", funName3)
     # tracer.getLineInfor("D:\docu\KL\Variant\Pop2.py", funName2)

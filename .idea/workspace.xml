@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db80e707-53a5-437c-9113-3a9fed3c89c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/KL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KL.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultLocalization/TestCaseReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaultLocalization/TestCaseReader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AstTree/AstHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/AstTree/AstHelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/unitTest1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/unitTest1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultLocalization/Tracer.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaultLocalization/Tracer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Genetic/Fitness.py" beforeDir="false" afterPath="$PROJECT_DIR$/Genetic/Fitness.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Genetic/Mutation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Genetic/Mutation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -130,12 +134,36 @@
       <workItem from="1583642500267" duration="5058000" />
       <workItem from="1583747759201" duration="12211000" />
       <workItem from="1583847866887" duration="1268000" />
-      <workItem from="1583935425311" duration="5168000" />
+      <workItem from="1583935425311" duration="5334000" />
+      <workItem from="1584016930485" duration="1261000" />
+      <workItem from="1584264857581" duration="1206000" />
+      <workItem from="1584363500888" duration="4225000" />
+      <workItem from="1584458074658" duration="26000" />
+      <workItem from="1584542373849" duration="562000" />
+      <workItem from="1584542966245" duration="1543000" />
+      <workItem from="1584544915335" duration="2741000" />
+      <workItem from="1584548428665" duration="338000" />
+      <workItem from="1584548780748" duration="1055000" />
+      <workItem from="1584711777070" duration="619000" />
+      <workItem from="1584870023082" duration="7604000" />
+      <workItem from="1584969661814" duration="9081000" />
     </task>
+    <task id="LOCAL-00001" summary="update fitness point">
+      <created>1583944384944</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583944384944</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update fitness point" />
+    <option name="LAST_COMMIT_MESSAGE" value="update fitness point" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="23" key="#Inspections" timestamp="1581996229159">
@@ -150,14 +178,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1583766894628" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1583944356058">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1583944378552">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583944356058" />
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1583171859161">
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583944378552" />
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1584544049963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583171859161" />
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584544049963" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1580392343771">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -174,14 +202,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580392343771" />
-    <state x="184" y="7" key="SettingsEditor" timestamp="1583171864853">
+    <state x="184" y="7" key="SettingsEditor" timestamp="1584548537645">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583171864853" />
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1583935487979">
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584548537645" />
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1583944390899">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583935487979" />
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1583944390899" />
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1584969661647">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584969661647" />
     <state x="380" y="0" width="606" height="728" key="find.popup" timestamp="1583508546318">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

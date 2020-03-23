@@ -1,6 +1,6 @@
 import sys
 sys.path.append('..')
-from Data.mid import mid
+from Variant.Pop2 import mid
 
 import unittest
 

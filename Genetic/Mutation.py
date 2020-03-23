@@ -7,6 +7,7 @@ sys.path.append('..')
 from FaultLocalization.Tracer import Tracer
 from FaultLocalization.DataReader import DataReader
 from AstTree.AstHelper import AstHelper
+from Genetic.Fitness import Fitness
 from Data.FlagObj import Flag
 
 class Genetic:
@@ -103,7 +104,30 @@ class Genetic:
 
 
         return cutpointA, cutpointB
+    def CrossOverOp(self,fAname,funAname,importStringA,fBname,funBname,importStringB):
+        tracer = Tracer()
+        weightpathMapA,lineArrA = tracer.getLineInfor(fAname,funAname,importStringA)
+        weightpathMapB, lineArrB = tracer.getLineInfor(fBname, funBname, importStringB)
+        lineArrC = lineArrA # copy children C and D by parent A and B
+        lineArrD = lineArrB
 
+        for i in range(len(lineArrC)):
+            print(lineArrC[i].text)
+        cutoff = self.GetCutOffPoint(fAname,funAname,importStringA)
+        print(cutoff)
+        print(weightpathMapA[cutoff])
+        for i in range(len(lineArrA)):
+             if i > cutoff:
+                 prob = random.random()
+                 # print(prob)
+                 if prob < weightpathMapA[cutoff]:
+                     # print(lineArrB[i].text)
+                     lineArrC[i].text = lineArrB[i].text
+                     lineArrD[i].text = lineArrA[i].text
+        for i in range(len(lineArrC)):
+            print(lineArrC[i].text)
+        for i in range(len(lineArrD)):
+            print(lineArrD[i].text)
     def GetCutOffPoint(self,fname,funName,importString):
         tracer = Tracer()
         arrLineWeight,arrLineInfor = tracer.getLineInfor(fname,funName,importString)
@@ -113,6 +137,13 @@ class Genetic:
         print(randomWeightPoint)
         print(arrLineInfor[randomWeightPoint].text)
         return randomWeightPoint # tra ve dong trong weight path
+    def GetProbLine(self,fname,funName,importString):
+        tracer = Tracer()
+        mapLineProp = {}
+        weightpathMapA, lineArrA = tracer.getLineInfor(fname, funName, importString)
+        print(weightpathMapA)
+        # for i in range(len(weightpathMapA)):
+        #     print(weightpathMapA[i])
 
 if __name__ == '__main__':
     # Create pollution by mutation and write to file
@@ -120,12 +151,9 @@ if __name__ == '__main__':
     # mu.WritePollutionToFile()
 
     pop5 = "from Variant.Pop5 import mid"
-    pop4 = "from Variant.Pop4 import mid"
-
-    mu = Genetic()
-    # mu.CrossOver("D:\docu\KL\Variant\Pop5.py","mid","D:\docu\KL\Variant\Pop4.py","mid",pop5,pop4)
-
-    mu.GetCutOffPoint("D:\docu\KL\Variant\Pop4.py","mid",pop4)
+    # Create mating pool and pick up variant to crossover and mutation
+    # fitnesspoint = Fitness()
+    # print(fitnesspoint.FitnessFunction("mid",pop5))
     # matingPool = []
     # mu = Genetic()
     # dR = DataReader()
@@ -141,16 +169,13 @@ if __name__ == '__main__':
     # for pop in popList:
     #     linkToContextMap[pop] = "D:\docu\KL\Variant\\" + pop[13:17] +".py"
     # for pop in popList:
-    #     flag = Flag(0, 0, 0)
-    #     contextDynamicTest = mu.FitnessFunction(pop)
-    #     exec(contextDynamicTest)
-    #     print(flag.passed)
-    #     listTestResult[pop] = flag.passed/pop_size
+    #     listTestResult[pop] = fitnesspoint.FitnessFunction("mid",pop) # add fitness point to list
     # for pop in popList:
     #     n = int(listTestResult[pop]*10)
-    #     # print(n)
+    #     print(n)
     #     for i in range(n):
     #         matingPool.append(pop)
+    # print(matingPool)
     # for pop in popList:
     #     a = random.choice(matingPool)
     #     b = random.choice(matingPool)
@@ -160,3 +185,15 @@ if __name__ == '__main__':
     #     progB = dR.getContextFileWithPath(linkToContextB)
     #     print(linkToContextA)
     #     print(linkToContextB)
+
+    mu = Genetic()
+    mu.CrossOverOp("D:\docu\KL\Variant\Pop5.py","mid","from Variant.Pop5 import mid","D:\docu\KL\Variant\Pop2.py","mid","from Variant.Pop2 import mid")
+    # mu.GetProbLine("D:\docu\KL\Variant\Pop2.py","mid","from Variant.Pop2 import mid")
+    # tracer = Tracer()
+    # weightpathMapA, lineArrA = tracer.getLineInfor("D:\docu\KL\Variant\Pop5.py","mid","from Variant.Pop5 import mid")
+    # lineArrC = lineArrA
+    # print("Len : " + str(len(lineArrC)))
+    # print("text 8 : " + lineArrC[8].text)
+    # lineArrC[8].text = "ldldld"
+    # for i in range(len(lineArrC)):
+    #     print(lineArrC[i].text)
