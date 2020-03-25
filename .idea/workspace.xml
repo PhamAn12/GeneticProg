@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db80e707-53a5-437c-9113-3a9fed3c89c3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/KL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KL.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AstTree/AstHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/AstTree/AstHelper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/unitTest1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/unitTest1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultLocalization/Tracer.py" beforeDir="false" afterPath="$PROJECT_DIR$/FaultLocalization/Tracer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Genetic/Fitness.py" beforeDir="false" afterPath="$PROJECT_DIR$/Genetic/Fitness.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Genetic/Mutation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Genetic/Mutation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +142,8 @@
       <workItem from="1584548780748" duration="1055000" />
       <workItem from="1584711777070" duration="619000" />
       <workItem from="1584870023082" duration="7604000" />
-      <workItem from="1584969661814" duration="9081000" />
+      <workItem from="1584969661814" duration="9148000" />
+      <workItem from="1585143717489" duration="5660000" />
     </task>
     <task id="LOCAL-00001" summary="update fitness point">
       <created>1583944384944</created>
@@ -155,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583944384944</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update fitness point">
+      <created>1584981462226</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584981462226</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,10 +182,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="433" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1583766894628" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1583944378552">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1584981456721">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583944378552" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584981456721" />
     <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1584544049963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -210,10 +214,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1583944390899" />
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1584969661647">
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1585143798616">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584969661647" />
+    <state x="368" y="169" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585143798616" />
     <state x="380" y="0" width="606" height="728" key="find.popup" timestamp="1583508546318">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

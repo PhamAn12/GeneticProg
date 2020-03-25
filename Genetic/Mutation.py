@@ -144,7 +144,19 @@ class Genetic:
         print(weightpathMapA)
         # for i in range(len(weightpathMapA)):
         #     print(weightpathMapA[i])
-
+    def MutationOp(self,context,nodeInsert,nodeIndex):
+        helper = AstHelper()
+        newCtx = ""
+        ranPopb = random.random()
+        if (ranPopb <= 0.33):
+            newCtx = helper.DeleteNode(context,nodeInsert)
+        elif(ranPopb > 0.33 and ranPopb <= 0.66):
+            newCtx = helper.SwapNode(context,nodeInsert,nodeIndex)
+        elif(ranPopb > 0.66 and ranPopb <= 0.80):
+            newCtx = helper.InsertAfter(context,nodeInsert,nodeIndex)
+        elif(ranPopb > 0.80 and ranPopb <= 1):
+            newCtx = helper.InsertBefor(context,nodeInsert,nodeIndex)
+        return newCtx
 if __name__ == '__main__':
     # Create pollution by mutation and write to file
     # mu = Genetic()

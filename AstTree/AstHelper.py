@@ -34,21 +34,17 @@ class AstHelper():
         del arr[-1]
         return len(arr)
 
-    def SwapNode(self, context, nodeInsert, nodeIndex):  # insert nodeInsert before nodeIndex
-        fullIndexNode = self.GetFullStatementNode(nodeIndex)
-        fullInsertNode = self.GetFullStatementNode(nodeInsert)
-        index = context.find(fullIndexNode)
-        tempContext =  context[:index] + fullInsertNode + context[index:]
-        return self.DeleteNode(tempContext,nodeInsert)
-        # return context[:index] + fullInsertNode + context[index:]
+
+
+
     def DeleteNode(self,context,node):
         stringNode = astor.to_source(node)
         arrNode = stringNode.split("\n")
-        print(arrNode)
+        # print(arrNode)
         for i in arrNode:
             if i.strip() in context:
-                context = context.replace(i, "", 1)
-                break
+                context = context.replace(i, "",2)
+
         return context
     def InsertBefor(self, context, nodeInsert , nodeIndex): # insert nodeInsert before nodeIndex
         fullIndexNode = self.GetFullStatementNode(nodeIndex)
@@ -57,8 +53,25 @@ class AstHelper():
         # tempContext =  context[:index] + fullInsertNode + context[index:]
         # return self.DeleteNode(tempContext,nodeInsert)
         return context[:index] + fullInsertNode + context[index:]
-
-
+    def InsertAfter(self,context, nodeInsert, nodeIndex): # insert nodeInsert after nodeIndex
+        fullIndexNode = self.GetFullStatementNode(nodeIndex)
+        fullInsertNode = self.GetFullStatementNode(nodeInsert)
+        index = context.find(fullIndexNode) + len(fullIndexNode)
+        return context[:index] + fullInsertNode + context[index:]
+    def SwapNode(self, context, nodeInsert, nodeIndex):  # insert nodeInsert before nodeIndex
+        # fullIndexNode = self.GetFullStatementNode(nodeIndex)
+        # fullInsertNode = self.GetFullStatementNode(nodeInsert)
+        # index = context.find(fullIndexNode)
+        # tempContext =  context[:index] + fullInsertNode + context[index:]
+        # return self.DeleteNode(tempContext,nodeInsert)
+        # return context[:index] + fullInsertNode + context[index:]
+        fullIndexNode = self.GetFullStatementNode(nodeIndex)
+        fullInsertNode = self.GetFullStatementNode(nodeInsert)
+        index = context.find(fullIndexNode)
+        insert = context.find(fullInsertNode)
+        print(index)
+        print(insert)
+        return context[:index] + fullInsertNode + context[(index + len(fullIndexNode)) : insert] + fullIndexNode + context[(insert+len(fullInsertNode)):]
 class Tranformer:
     def DeleteStmt(self, lineNo, arr):
         return arr.remove(arr[lineNo])
@@ -167,14 +180,20 @@ if __name__ == '__main__':
     tree = ast.parse(context)
 
     helper = AstHelper()
-    node5 = helper.GetNodeByLineNo(9,tree)
+    node5 = helper.GetNodeByLineNo(5,tree)
     # print(astor.to_source(node9))
 
     node4 = helper.GetNodeByLineNo(4,tree)
     # print(astor.to_source(node4))
     stringNode4 = helper.GetFullStatementNode(node4)
     stringNode5 = helper.GetFullStatementNode(node5)
-    print(stringNode4)
+    # print(stringNode4)
+    print(stringNode5)
     # newContext = helper.InsertAfter(context,node8,node4)
     newContext = helper.SwapNode(context,node5,node4) # insert node5 before node4
+
+    print(context)
     print(newContext)
+    # print(df)
+
+    # print(context)
